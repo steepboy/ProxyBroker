@@ -20,7 +20,7 @@ def main():
     proxies = asyncio.Queue()
     broker = Broker(proxies)
     tasks = asyncio.gather(
-        broker.grab(countries=['US', 'GB'], limit=10),
+        broker.grab(countries=['US', 'UA'], limit=10),
         save(proxies, filename='proxies.txt'),
     )
     loop = asyncio.get_event_loop()
